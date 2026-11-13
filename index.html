@@ -12,19 +12,27 @@
   </header>
 
   <main>
-    <div id="image">Di chuột qua một hình ảnh bên dưới để hiển thị ở đây.</div>
+    <div id="image" aria-live="polite">Di chuột qua một hình ảnh bên dưới để hiển thị ở đây.</div>
 
     <div class="gallery">
-      <img class="preview" src="anh1.jpg" alt="Cỏ"
-           onmouseover="upDate(this)" onmouseleave="unDo()">
-      <img class="preview" src="anh2.jpg" alt="Biển"
-           onmouseover="upDate(this)" onmouseleave="unDo()">
-      <img class="preview" src="anh3.jpg" alt="Em"
-           onmouseover="upDate(this)" onmouseleave="unDo()">
-      <img class="preview" src="anh4.jpg" alt="Và"
-           onmouseover="upDate(this)" onmouseleave="unDo()">
-      <img class="preview" src="anh5.jpg" alt="Anh"
-           onmouseover="upDate(this)" onmouseleave="unDo()">
+      <img class="preview" src="anh1.jpg" alt="Ảnh số 1: mô tả ảnh của bạn"
+           onmouseover="upDate(this)" onmouseleave="unDo()"
+           onfocus="upDate(this)" onblur="unDo()">
+      <img class="preview" src="anh2.jpg" alt="Ảnh số 2: mô tả ảnh của bạn"
+           onmouseover="upDate(this)" onmouseleave="unDo()"
+           onfocus="upDate(this)" onblur="unDo()">
+      <img class="preview" src="anh3.jpg" alt="Ảnh số 3: mô tả ảnh của bạn"
+           onmouseover="upDate(this)" onmouseleave="unDo()"
+           onfocus="upDate(this)" onblur="unDo()">
+      <img class="preview" src="anh4.jpg" alt="Ảnh số 4: mô tả ảnh của bạn"
+           onmouseover="upDate(this)" onmouseleave="unDo()"
+           onfocus="upDate(this)" onblur="unDo()">
+      <img class="preview" src="anh5.jpg" alt="Ảnh số 5: mô tả ảnh của bạn"
+           onmouseover="upDate(this)" onmouseleave="unDo()"
+           onfocus="upDate(this)" onblur="unDo()">
+      <img class="preview" src="anh6.jpg" alt="Ảnh số 6: mô tả ảnh của bạn"
+           onmouseover="upDate(this)" onmouseleave="unDo()"
+           onfocus="upDate(this)" onblur="unDo()">
     </div>
   </main>
 

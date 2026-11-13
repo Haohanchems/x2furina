@@ -1,9 +1,9 @@
 // Văn bản mặc định của khung hiển thị
 const DEFAULT_TEXT = "Di chuột qua một hình ảnh bên dưới để hiển thị ở đây.";
 
-// Chạy khi chuột (hoặc phím Tab) vào một hình ảnh
+// Chạy khi chuột vào ảnh (onmouseover) hoặc ảnh nhận focus (onfocus)
 function upDate(previewPic) {
-  console.log("Sự kiện upDate đã kích hoạt");
+  console.log("upDate đã kích hoạt");
   console.log("alt:", previewPic.alt);
   console.log("src:", previewPic.src);
 
@@ -12,21 +12,22 @@ function upDate(previewPic) {
   imageDiv.style.backgroundImage = "url('" + previewPic.src + "')";
 }
 
-// Chạy khi chuột (hoặc focus) rời khỏi hình ảnh
+// Chạy khi chuột rời ảnh (onmouseleave) hoặc ảnh mất focus (onblur)
 function unDo() {
-  console.log("Sự kiện unDo đã kích hoạt");
+  console.log("unDo đã kích hoạt");
 
   const imageDiv = document.getElementById("image");
   imageDiv.style.backgroundImage = "url('')";
   imageDiv.innerHTML = DEFAULT_TEXT;
 }
 
-// Phần nâng cao: hỗ trợ bàn phím (Tab) cho mỗi ảnh
+// Chạy khi trang tải xong (onload): thêm tabindex cho từng ảnh
 function addTabFocus() {
-  const images = document.querySelectorAll(".preview");
-  images.forEach(function (img, index) {
-    img.setAttribute("tabindex", index + 1);
-    img.addEventListener("focus", function () { upDate(img); });
-    img.addEventListener("blur", unDo);
-  });
+  console.log("onload đã kích hoạt: addTabFocus");
+
+  const images = document.getElementsByClassName("preview");
+  for (let i = 0; i < images.length; i++) {
+    images[i].setAttribute("tabindex", "0");
+    console.log("Đã thêm tabindex cho ảnh " + (i + 1));
+  }
 }
