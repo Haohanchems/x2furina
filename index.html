@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thư viện ảnh tương tác</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="addTabFocus()">
+  <header>
+    <h1>Thư viện ảnh tương tác</h1>
+  </header>
+
+  <main>
+    <div id="image">Di chuột qua một hình ảnh bên dưới để hiển thị ở đây.</div>
+
+    <div class="gallery">
+      <img class="preview" src="anh1.jpg" alt="Cỏ"
+           onmouseover="upDate(this)" onmouseleave="unDo()">
+      <img class="preview" src="anh2.jpg" alt="Biển"
+           onmouseover="upDate(this)" onmouseleave="unDo()">
+      <img class="preview" src="anh3.jpg" alt="Em"
+           onmouseover="upDate(this)" onmouseleave="unDo()">
+      <img class="preview" src="anh4.jpg" alt="Và"
+           onmouseover="upDate(this)" onmouseleave="unDo()">
+      <img class="preview" src="anh5.jpg" alt="Anh"
+           onmouseover="upDate(this)" onmouseleave="unDo()">
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
